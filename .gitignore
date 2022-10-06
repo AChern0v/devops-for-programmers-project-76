@@ -1,1 +1,4 @@
 env_for_ansible
+stack.yml
+password
+docker-compose
