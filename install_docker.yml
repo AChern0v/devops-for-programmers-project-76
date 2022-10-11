@@ -13,7 +13,7 @@
     - name: Install aptitude
       ansible.builtin.apt:
         name: aptitude
-        state: 0.8.13
+        state: present
         update_cache: true
 
     - name: Install required system packages
@@ -26,6 +26,7 @@
           - python3-pip
           - virtualenv
           - python3-setuptools
+        state: present
         update_cache: true
 
     - name: Add Docker GPG apt Key
@@ -41,6 +42,7 @@
     - name: Update apt and install docker-ce
       ansible.builtin.apt:
         name: docker-ce
+        state: present
         update_cache: true
 
     - name: Install Docker Module for Python
