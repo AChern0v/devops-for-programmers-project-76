@@ -26,6 +26,8 @@
           - 3000:3000
       tags: [redmine, deploy]
 
+- hosts: webservers
+  tasks:
     - name: Install datadog
       ansible.builtin.import_role:
         name: datadog.datadog
